@@ -9,7 +9,7 @@ class App extends Component {
     super(props);
     this.state = { 
       results: [],
-      query: ''
+      query: '',
     }
     this.handleQuery = this.handleQuery.bind(this);
   }
@@ -30,7 +30,6 @@ class App extends Component {
   }
   handleSearch(query){
     const dbUrl = 'https://api.themoviedb.org/3/search/movie?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=';
-    
 
     axios.get(`${dbUrl}${query}`)
     .then( (response) => {

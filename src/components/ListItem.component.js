@@ -9,7 +9,11 @@ class ListItem extends Component {
     render() {
         const {data} = this.props;
         return (<div className="ListItem">
+            <img src = {`https://image.tmdb.org/t/p/w185${data.poster_path}`} />
             {data.original_title}
+            <br />
+            {data.overview}
+            <br /><br />
         </div>);
     }
 }
